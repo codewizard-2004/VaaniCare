@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#bg)"/>
+  <g fill="white" transform="translate(48, 30) scale(0.5)">
+    <!-- Microphone icon -->
+    <rect x="70" y="30" width="52" height="90" rx="26"/>
+    <path d="M40 100 L40 130 Q40 175 96 175 Q152 175 152 130 L152 100" fill="none" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <line x1="96" y1="175" x2="96" y2="210" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <line x1="60" y1="210" x2="132" y2="210" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <text x="96" y="170" text-anchor="middle" fill="white" font-family="system-ui" font-size="24" font-weight="bold">VaaniCare</text>
+</svg>

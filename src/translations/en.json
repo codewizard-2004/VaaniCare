@@ -1,0 +1,159 @@
+{
+  "app": {
+    "name": "VaaniCare",
+    "tagline": "Your Voice Assistant",
+    "welcome": "Welcome to VaaniCare",
+    "greeting": "Hello! How can I help you today?",
+    "greetingMorning": "Good morning! How can I help you today?",
+    "greetingAfternoon": "Good afternoon! How can I help you today?",
+    "greetingEvening": "Good evening! How can I help you today?",
+    "listening": "Listening...",
+    "processing": "Processing...",
+    "speaking": "Speaking...",
+    "tapToSpeak": "Tap to speak",
+    "tapToStop": "Tap to stop",
+    "or": "or",
+    "chooseService": "Choose a service below"
+  },
+  "services": {
+    "healthcare": {
+      "name": "Healthcare",
+      "description": "Find doctors, hospitals & health guidance",
+      "voicePrompt": "You selected Healthcare. Would you like to book a doctor, find a hospital, or get health guidance?",
+      "bookDoctor": "Book Doctor",
+      "findHospital": "Find Hospital",
+      "healthGuidance": "Health Guidance"
+    },
+    "emergency": {
+      "name": "Emergency",
+      "description": "Quick access to emergency services",
+      "voicePrompt": "This is Emergency services. I can connect you to Police, Ambulance, Fire, or Women Helpline. Which one do you need?",
+      "police": "Police",
+      "ambulance": "Ambulance",
+      "fire": "Fire",
+      "womenHelpline": "Women Helpline",
+      "calling": "Calling"
+    },
+    "legal": {
+      "name": "Legal Aid",
+      "description": "Get legal support and assistance",
+      "voicePrompt": "You selected Legal Aid. I can help you with legal consultation, know your rights, or file a complaint. What do you need?",
+      "consultation": "Legal Consultation",
+      "rights": "Know Your Rights",
+      "complaint": "File Complaint"
+    },
+    "government": {
+      "name": "Government",
+      "description": "Explore schemes & check eligibility",
+      "voicePrompt": "You selected Government services. I can help you find government schemes, check your eligibility, or track your applications. What would you like?",
+      "schemes": "Find Schemes",
+      "eligibility": "Check Eligibility",
+      "track": "Track Application"
+    },
+    "employment": {
+      "name": "Employment",
+      "description": "Find jobs and work opportunities",
+      "voicePrompt": "You selected Employment. I can help you find jobs, create a resume, or learn new skills. What would you like to do?",
+      "findJobs": "Find Jobs",
+      "createResume": "Create Resume",
+      "learnSkills": "Learn Skills"
+    }
+  },
+  "doctor": {
+    "title": "Book a Doctor",
+    "selectSpecialty": "Select Specialty",
+    "selectDate": "Select Date",
+    "selectTime": "Select Time",
+    "availableDoctors": "Available Doctors",
+    "experience": "years experience",
+    "rating": "Rating",
+    "fee": "Fee",
+    "bookAppointment": "Book Appointment",
+    "confirmBooking": "Confirm Booking",
+    "bookingConfirmed": "Booking Confirmed!",
+    "appointmentDetails": "Your appointment is booked for",
+    "specialties": {
+      "general": "General Physician",
+      "cardio": "Cardiologist",
+      "derma": "Dermatologist",
+      "ortho": "Orthopedic",
+      "pediatric": "Pediatrician",
+      "gynec": "Gynecologist",
+      "neuro": "Neurologist",
+      "ent": "ENT Specialist"
+    }
+  },
+  "emergency": {
+    "title": "Emergency Services",
+    "callNow": "Call Now",
+    "policeNumber": "100",
+    "ambulanceNumber": "108",
+    "fireNumber": "101",
+    "womenNumber": "181",
+    "confirmCall": "Do you want to call"
+  },
+  "schemes": {
+    "title": "Government Schemes",
+    "checkEligibility": "Check Eligibility",
+    "apply": "Apply Now",
+    "benefits": "Benefits",
+    "documents": "Required Documents",
+    "eligible": "You are eligible!",
+    "notEligible": "You may not be eligible",
+    "learnMore": "Learn More"
+  },
+  "jobs": {
+    "title": "Find Jobs",
+    "searchJobs": "Search jobs...",
+    "location": "Location",
+    "salary": "Salary",
+    "type": "Job Type",
+    "fullTime": "Full Time",
+    "partTime": "Part Time",
+    "contract": "Contract",
+    "apply": "Apply",
+    "saved": "Saved Jobs",
+    "applied": "Applied"
+  },
+  "common": {
+    "back": "Back",
+    "home": "Home",
+    "next": "Next",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "call": "Call",
+    "share": "Share",
+    "help": "Help",
+    "settings": "Settings",
+    "language": "Language",
+    "english": "English",
+    "malayalam": "Malayalam"
+  },
+  "voice": {
+    "notSupported": "Voice is not supported on this device",
+    "permissionDenied": "Microphone permission denied",
+    "noSpeech": "No speech detected. Please try again.",
+    "tryAgain": "Sorry, I didn't understand. Please try again.",
+    "commands": {
+      "healthcare": "Say 'Healthcare' or 'Doctor' or 'Hospital'",
+      "emergency": "Say 'Emergency' or 'Help' or 'Police'",
+      "legal": "Say 'Legal' or 'Lawyer' or 'Rights'",
+      "government": "Say 'Government' or 'Schemes' or 'Pension'",
+      "employment": "Say 'Job' or 'Work' or 'Employment'",
+      "back": "Say 'Back' or 'Home' to go back",
+      "yes": "Say 'Yes' to confirm",
+      "no": "Say 'No' to cancel"
+    }
+  },
+  "accessibility": {
+    "micButton": "Press to speak",
+    "serviceCard": "Service option",
+    "closeButton": "Close",
+    "backButton": "Go back"
+  }
+}

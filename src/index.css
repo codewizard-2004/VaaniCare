@@ -1,119 +1,197 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap");
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  /* Vital Flow Color Palette */
-  --color-deep-navy: #0b1624;
-  --color-navy-light: #132238;
-  --color-teal: #2fb7b3;
-  --color-aqua: #6fe3d6;
-  --color-soft-green: #a8e6a1;
-  --color-warm-amber: #f2a24b;
-  --color-glow: rgba(111, 227, 214, 0.15);
-
-  font-family: "Nunito", "Inter", "Noto Sans Malayalam", system-ui, sans-serif;
-  line-height: 1.6;
-  font-weight: 500;
-  color-scheme: dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  background-color: var(--color-deep-navy);
-}
-
-#root {
-  min-height: 100vh;
-}
-
-/* Breathing Animation */
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.6;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 239 84% 67%;
+    --radius: 1rem;
   }
 
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
-}
-
-@keyframes pulse-soft {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.7;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 239 84% 67%;
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
+@layer base {
+  * {
+    @apply border-border;
   }
 
-  50% {
-    transform: translateY(-10px);
+  body {
+    @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Large touch targets for elderly users */
+  button,
+  [role="button"],
+  a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* High contrast focus states */
+  *:focus-visible {
+    @apply outline-none ring-4 ring-primary ring-offset-2;
   }
 }
 
-@keyframes wave {
-  0%,
-  100% {
-    height: 20px;
+@layer components {
+
+  /* Voice indicator animation */
+  .voice-indicator {
+    @apply flex items-center justify-center gap-1;
   }
 
-  50% {
-    height: 40px;
+  .voice-indicator span {
+    @apply w-1 bg-primary rounded-full;
+    animation: voice-wave 1s ease-in-out infinite;
+  }
+
+  .voice-indicator span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .voice-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .voice-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .voice-indicator span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .voice-indicator span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  /* Pulse animation for mic button */
+  .pulse-ring {
+    @apply absolute inset-0 rounded-full bg-primary;
+    animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Service card styles */
+  .service-card {
+    @apply relative overflow-hidden rounded-2xl p-6 transition-all duration-300;
+    @apply hover:scale-[1.02] hover:shadow-xl;
+    @apply active:scale-[0.98];
+    @apply focus-visible:ring-4 focus-visible:ring-offset-2;
+  }
+
+  .service-card-healthcare {
+    @apply bg-gradient-to-br from-red-500 to-red-600 text-white;
+    @apply focus-visible:ring-red-500;
+  }
+
+  .service-card-emergency {
+    @apply bg-gradient-to-br from-orange-500 to-orange-600 text-white;
+    @apply focus-visible:ring-orange-500;
+  }
+
+  .service-card-legal {
+    @apply bg-gradient-to-br from-violet-500 to-violet-600 text-white;
+    @apply focus-visible:ring-violet-500;
+  }
+
+  .service-card-government {
+    @apply bg-gradient-to-br from-blue-500 to-blue-600 text-white;
+    @apply focus-visible:ring-blue-500;
+  }
+
+  .service-card-employment {
+    @apply bg-gradient-to-br from-green-500 to-green-600 text-white;
+    @apply focus-visible:ring-green-500;
+  }
+
+  /* Accessibility text sizes */
+  .text-accessible {
+    @apply text-lg sm:text-xl leading-relaxed;
+  }
+
+  .text-accessible-lg {
+    @apply text-xl sm:text-2xl leading-relaxed;
+  }
+
+  .text-accessible-xl {
+    @apply text-2xl sm:text-3xl leading-relaxed font-semibold;
+  }
+
+  /* Safe area padding for mobile */
+  .safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
   }
 }
 
-.animate-breathe {
-  animation: breathe 4s ease-in-out infinite;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-.animate-pulse-soft {
-  animation: pulse-soft 3s ease-in-out infinite;
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-/* Gradient Text */
-.text-gradient-vital {
-  background: linear-gradient(
-    135deg,
-    #2fb7b3 0%,
-    #6fe3d6 50%,
-    #a8e6a1 75%,
-    #f2a24b 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
 
-/* Glow Effects */
-.glow-teal {
-  box-shadow: 0 0 40px rgba(47, 183, 179, 0.2);
-}
-
-.glow-amber {
-  box-shadow: 0 0 40px rgba(242, 162, 75, 0.2);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

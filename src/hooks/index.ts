@@ -1,2 +1,2 @@
-export { useVoiceBridge } from "./useVoiceBridge";
-export { useHomeVoiceAgent } from "./useHomeVoiceAgent";
+export { useVoiceRecognition } from './useVoiceRecognition';
+export { useSpeechSynthesis } from './useSpeechSynthesis';

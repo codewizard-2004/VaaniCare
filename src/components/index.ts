@@ -1,2 +1,4 @@
-// Components barrel export
-// Add component exports here as you create them
+export { VoiceButton, VoiceIndicator } from './VoiceButton';
+export { ServiceCard, ServiceGrid } from './ServiceCard';
+export { LanguageSelector, LanguageToggle } from './LanguageSelector';
+export { Header } from './Header';
